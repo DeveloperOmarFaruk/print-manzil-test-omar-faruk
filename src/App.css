@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --light-blue: #364a63;
+  --black: #000000;
+  --light-white-gray: #dddddd;
+  --purple: #0075ff;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  margin: 4rem auto;
+  width: 95%;
+  display: block;
+}
+
+/* =================== */
+/* Table Design Area */
+/* =================== */
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+  border: 1px solid var(--black);
+  word-wrap: break-word;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid var(--light-white-gray);
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid var(--light-white-gray);
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* ================= */
+/* Paginate Design */
+/* ================ */
+
+.paginate-div {
+  display: flex;
+  justify-content: end;
+  margin-top: 1.5rem;
+  font-size: 16px;
+}
+
+.paginate-row-input-div {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+.paginate-row-input-div input {
+  height: 7px;
+  width: 45px;
+  margin-left: 10px;
+}
+
+.paginate-page-number-div {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.paginate-page-number-div p {
+  margin-left: 5px;
+}
+
+.paginate-page-arrow-div {
+  display: flex;
+}
+
+.paginate-page-arrow-div button {
+  border: none;
+  cursor: pointer;
+  color: var(--black);
+  background-color: none !important;
+  font-size: 1rem;
+}
+
+/* ========================= */
+/* Logo Image attatch design */
+/* ======================== */
+
+.logo-attatch-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.tshirt-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  border: 2px solid var(--light-white-gray);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tshirt-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[draggable="true"] {
+  cursor: move;
+}
+
+.controls {
+  text-align: start;
+  align-items: center;
+  font-size: 20px;
+}
+
+.controls label input {
+  margin: 0rem 0rem 1.5rem 0.5rem;
+}
+
+.controls button {
+  border: none;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--purple);
+  color: var(--white);
+}
